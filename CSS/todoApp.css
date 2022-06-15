@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: url("../Images/sunset.jpg") no-repeat fixed center;
+}
+
+.container {
+    width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 80px;
+    /* border: 1px black solid; */
+    padding-bottom: 20px;
+    /* border-radius: 20px; */
+}
+
+h3 {
+    color: white;
+    font-size: 30px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    text-shadow: 2px 6px 20px gray;
+}
+
+.input-div {
+    background-color: white;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    align-self: center;
+    /* border: black 1px solid; */
+    border-radius: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 2px 6px 20px gray;
+}
+
+.input-box {
+    color: #ff8c04;
+    border: 0px;
+    outline: none;
+    height: 30px;
+    width: 235px;
+    margin-right: 5px;
+    font-size: 17px;
+}
+
+.input-box::placeholder {
+    color: lightsalmon;
+    font-size: 17px;
+}
+
+.add-button {
+    color: white;
+    width: 98px;
+    height: 35px;
+    background-color: lightsalmon;
+    border: 0px;
+    border-radius: 5px;
+    font-size: 17px;
+    /* box-shadow: 1px 1px 10px lightgray; */
+}
+
+.add-button:hover {
+    background-color: lightcoral;
+    cursor: pointer;
+}
+
+.add-button:active {
+    background-color: lightblue;
+}
+
+.list-box {
+    background-color: white;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    align-self: center;
+    /* border: black 1px solid; */
+    border-radius: 5px;
+    font-size: 17px;
+    box-shadow: 2px 6px 20px gray;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    color: grey;
+    height: 19.5px;
+    padding-top: 17px;
+    padding-bottom: 16px;
+    padding-left: 17px;
+    border-bottom: 1px lightgray solid;
+    border-radius: 5px;
+}
+
+li:hover {
+    color: black;
+    background-color: azure;
+}
+
+.remaining {
+    color: lightcoral;
+    font-size: 13px;
+}
+
+.clear-btn-span {
+    float: right;
+}
+
+.clr-btn {
+    border: 0px;
+    background-color: white;
+    color: lightcoral;
+    font-size: 13px;
+}
+
+.clr-btn:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.clr-btn:active {
+    color: lightblue;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+.check-box {
+    position: relative;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+.check-box::before {
+    content: "";
+    background: url("../Images/checkmark.png");
+    background-position: center;
+    background-size: contain;
+    width: 26px;
+    height: 26px;
+    top: -2px;
+    left: -1px;
+    position: absolute;
+    transition: all 0.4s cubic-bezier(0.54, 0.01, 1.49);
+    transform: scale(0) rotateX(180deg); 
+}
+
+input[type=checkbox]:checked + .check-box::before {
+    transform: scale(1) rotateX(0deg);
+}
+
+input[type=checkbox]:checked + .linethrough {
+    text-decoration: line-through;
+    color: black;
+}
+
+.check-box::after {
+    content: "";
+    border: 2px solid #ff8c04;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    left: -1px;
+    top: -3.5px;
+    position: absolute;
+}
+
+.delete {
+    position: relative;
+    margin-left: 318px;
+    content: "";
+    background: url("../Images/remove.png");
+    background-position: center;
+    background-size: contain;
+    width: 27px;
+    height: 27px;
+    top: -23px;
+    cursor: pointer;
+}
+
+.footer {
+    color: white;
+    text-align: center;
+    font-size: 13px;
+    text-shadow: 3px 3px 10px gray;
+    margin-top: 20px;
+}
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+    <link href="CSS/todoApp.css" rel="stylesheet">
+</head>
+<body ng-app="todoApp" ng-controller="todoCont">
+    <div class="container">
+        <div class="heading">
+            <h3>To-Do List</h3>
+        </div>
+        <div class="input-div">
+            <form ng-submit="addTask()">
+                <input type="text" ng-model="task" name="task" class="input-box" placeholder="Type here..">
+                <input type="submit" class="add-button" value="Add task"> 
+            </form>
+        </div>
+        <div class="list-box">
+            <ul>
+                <li class="listitems" ng-repeat="task in tasks">           
+                    <label for="{{$index}}" class="linethrough">
+                        <input type="checkbox" id="{{$index}}" ng-model="task.status">
+                        <span class="check-box"></span> 
+                        {{task.title|capitalize}}
+                    </label>
+                    <div class="delete" ng-click="removeTask($index)"></div>
+                </li>
+            </ul>
+        </div>
+        <div class="input-div">
+            <label class="remaining">{{remaining()}} items left</label>
+            <span class="clear-btn-span">
+                <input type="button" class="clr-btn" ng-click="clearAll()" value="Clear All">
+                <input type="button" class="clr-btn" ng-click="clearCom()" value="Clear Completed">
+            </span>
+        </div>
+        <div class="footer">
+            <span>@parthtank_</span>
+        </div>
+    </div>
+</body>
+<script src="JS/angular.min.js"></script>
+<script src="JS/app.js"></script>
+<script src="JS/controller.js"></script>
+</html>
